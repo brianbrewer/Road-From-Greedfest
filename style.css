@@ -100,3 +100,8 @@ h2
 	position: relative;
 	height: 250px;
 }
+
+.path img
+{
+	max-width: 100%;
+}
