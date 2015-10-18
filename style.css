@@ -2,13 +2,99 @@ body
 {
 	background-color: black;
 	padding: 0;
-	margin:0
+	margin: 0;
+	color: white;
+	font-weight: normal!important;
+}
+
+@font-face
+{
+    font-family: 'Albertus';
+    src: url('ufonts.com_albertus-mt-webfont.eot');
+    src: url('ufonts.com_albertus-mt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ufonts.com_albertus-mt-webfont.woff2') format('woff2'),
+         url('ufonts.com_albertus-mt-webfont.woff') format('woff'),
+         url('ufonts.com_albertus-mt-webfont.ttf') format('truetype'),
+         url('ufonts.com_albertus-mt-webfont.svg#albertus_mtregular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Albertus';
+    src: url('ufonts.com_albertus-mt-light-webfont.eot');
+    src: url('ufonts.com_albertus-mt-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ufonts.com_albertus-mt-light-webfont.woff2') format('woff2'),
+         url('ufonts.com_albertus-mt-light-webfont.woff') format('woff'),
+         url('ufonts.com_albertus-mt-light-webfont.ttf') format('truetype'),
+         url('ufonts.com_albertus-mt-light-webfont.svg#albertus_mtregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main
+{
+	width: 1500px;
+	font-family: 'Albertus',sans-serif!important;
+	-webkit-font-smoothing: antialiased;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 100px;
 }
 
 #logo
 {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: relative;
+	display: inline-block;
+	width: 1100px;
+}
+
+.welcome
+{
+	font-size: 22px;
+	line-height: 32px;
+}
+
+h2
+{
+	font-size: 52px;
+	font-weight: normal;
+	padding: none;
+	margin: none;
+}
+
+.welcomeLeft, .welcomeRight
+{
+	width: 450px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.line
+{
+	width: 2px;
+	background-color: white;
+	display: inline-block;
+	height: 100%;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.welcomeLeft
+{
+	text-align: right;
+}
+
+.welcomeRight
+{
+	text-align: left;
+}
+
+.welcomeInner
+{
+	position: relative;
+	height: 250px;
 }
