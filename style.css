@@ -35,7 +35,6 @@ body
 
 .main
 {
-	width: 1500px;
 	font-family: 'Albertus',sans-serif!important;
 	-webkit-font-smoothing: antialiased;
 	margin: 0 auto;
@@ -47,13 +46,17 @@ body
 {
 	position: relative;
 	display: inline-block;
-	width: 1100px;
 }
 
 .welcome
 {
 	font-size: 22px;
 	line-height: 32px;
+	background-image: url("http://media.overkillsoftware.com/2015/09/crimefest-toptextbx2.png");
+	height: 599px;
+	box-sizing: border-box;
+	padding-top: 80px;
+	background-position: center center;
 }
 
 h2
@@ -76,11 +79,10 @@ h2
 .line
 {
 	width: 2px;
-	background-color: white;
 	display: inline-block;
 	height: 100%;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: 60px;
+	margin-right: 60px;
 }
 
 .welcomeLeft
