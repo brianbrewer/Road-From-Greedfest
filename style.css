@@ -110,3 +110,11 @@ h2
 {
 	max-width: 100%;
 }
+
+#footer
+{
+	width: 100%;
+	height: 625px;
+	background-image: url('greedfest-footer.jpg');
+	background-position: center;
+}
