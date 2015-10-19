@@ -48,6 +48,12 @@ body
 	display: inline-block;
 }
 
+#footer
+{
+	position: relative;
+	display: inline-block;
+}
+
 .welcome
 {
 	font-size: 22px;
