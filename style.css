@@ -7,6 +7,11 @@ body
 	font-weight: normal!important;
 }
 
+a
+{
+	color: #D3880E;
+}
+
 @font-face
 {
     font-family: 'Albertus';
