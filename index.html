@@ -7,6 +7,15 @@
 		<link href='https://fonts.googleapis.com/css?family=Montserrat|Archivo+Narrow&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<title>The Road From Greedfest</title>
 		<script src="script.js" charset="utf-8"></script>
+		<script>
+			var parseData = function (data) {
+				// Fill in dataset for known goals
+				document.querySelector(".pathItemFinal").dataset.current = data.response.player_count;
+				document.querySelector(".pathItemB6").dataset.current = data.response.metacritic.user_score;
+				document.querySelector(".pathItemB5").dataset.current = Math.floor((data.response.steam.reviews_positive / data.response.steam.reviews_all) * 100);
+			}
+		</script>
+		<!--<script src="http://crimefest.eddydev.de/api/api.php?callback=parseData"></script>-->
 	</head>
 
 	<body>
@@ -30,6 +39,50 @@
 
 			<div class="path">
 				<img src="path2.png">
+				<div class="pathItemContainer pathContainer">
+					<img class="pathItemGoal pathItemFinal" src="goal-achieved_animated.gif" data-title="Crime.Net Wasteland!" data-goal="10000" data-current="24459" data-description="Get under 10,000 concurrent players" style="left: 708px; top: 2470px">
+
+					<img class="pathItemGoalBroken pathItemA6" src="goal-locked_animated.gif" style="left: 282px; top: 2242px">
+					<img class="pathItemGoalBroken pathItemA5" src="goal-locked_animated.gif" style="left: 282px; top: 2081px">
+					<img class="pathItemGoalBroken pathItemA4 hidden" src="goal-locked_animated.gif" style="left: 282px; top: 1920px">
+					<img class="pathItemGoalBroken pathItemA3" src="goal-locked_animated.gif" style="left: 282px; top: 1759px">
+					<img class="pathItemGoalBroken pathItemA2" src="goal-locked_animated.gif" style="left: 282px; top: 1598px">
+					<img class="pathItemGoalBroken pathItemA1" src="goal-locked_animated.gif" style="left: 282px; top: 1437px">
+
+					<img class="pathItemGoal pathItemB6" src="goal-achieved_animated.gif" data-title="Critique This!" data-goal="3" data-current="4.6" data-description="Reduce the Metacritic userscore for PAYDAY2 to 3" style="left: 566px; top: 2242px">
+					<img class="pathItemGoal pathItemB5" src="goal-achieved_animated.gif" data-title="Steaming Mix of Review" data-goal="69" data-current="79" data-description="Reduce PAYDAY2 on Steam to Mixed (69%)" style="left: 566px; top: 2081px">
+					<img class="pathItemGoal pathItemB4" src="goal-achieved_animated.gif" data-title="Challenge Coming Soon!" data-goal="?" data-current="?" data-description="It's a mystery!" style="left: 566px; top: 1920px">
+					<img class="pathItemGoal pathItemB3" src="goal-achieved_animated.gif" data-title="Challenge Coming Soon!" data-goal="?" data-current="?" data-description="It's a mystery!" style="left: 566px; top: 1759px">
+					<img class="pathItemGoal pathItemB2" src="goal-achieved_animated.gif" data-title="Challenge Coming Soon!" data-goal="?" data-current="?" data-description="It's a mystery!" style="left: 566px; top: 1598px">
+					<img class="pathItemGoal pathItemB1" src="goal-achieved_animated.gif" data-title="Challenge Coming Soon!" data-goal="?" data-current="?" data-description="It's a mystery!" style="left: 566px; top: 1437px">
+
+					<img class="pathItemGoalBroken pathItemC6" src="goal-locked_animated.gif" data-title="" style="left: 846px; top: 2242px">
+					<img class="pathItemGoalBroken pathItemC5" src="goal-locked_animated.gif" data-title="" style="left: 846px; top: 2081px">
+					<img class="pathItemGoalBroken pathItemC4" src="goal-locked_animated.gif" data-title="" style="left: 846px; top: 1920px">
+					<img class="pathItemGoalBroken pathItemC3" src="goal-locked_animated.gif" data-title="" style="left: 846px; top: 1759px">
+					<img class="pathItemGoalBroken pathItemC2" src="goal-locked_animated.gif" data-title="" style="left: 846px; top: 1598px">
+					<img class="pathItemGoalBroken pathItemC1" src="goal-locked_animated.gif" data-title="" style="left: 846px; top: 1437px">
+
+					<img class="pathItemGoalBroken pathItemD6" src="goal-locked_animated.gif" data-title="" style="left: 1124px; top: 2242px">
+					<img class="pathItemGoalBroken pathItemD5" src="goal-locked_animated.gif" data-title="" style="left: 1124px; top: 2081px">
+					<img class="pathItemGoalBroken pathItemD4" src="goal-locked_animated.gif" data-title="" style="left: 1124px; top: 1920px">
+					<img class="pathItemGoalBroken pathItemD3" src="goal-locked_animated.gif" data-title="" style="left: 1124px; top: 1759px">
+					<img class="pathItemGoalBroken pathItemD2" src="goal-locked_animated.gif" data-title="" style="left: 1124px; top: 1598px">
+					<img class="pathItemGoalBroken pathItemD1" src="goal-locked_animated.gif" data-title="" style="left: 1124px; top: 1437px">
+				</div>
+				<div class="pathHeisterContainer pathContainer">
+					<img class="pathHeisterWolf" src="wolf.gif" style="left: 702px; top: 2250px;">
+				</div>
+				<div class="pathRoomContainer pathContainer">
+					<img src="Almir_animated.gif" class="pathRoomAlmir" style="left: 702px; top: 500px;">
+				</div>
+				<div class="pathGoalPopup hidden" style="left: 1000px; top: 1000px;">
+					<div class="close"></div>
+					<div class="current"></div>
+					<div class="goal"></div>
+					<div class="title"></div>
+					<div class="description"></div>
+				</div>
 			</div>
       <div id="footer"></div>
 		</div>
@@ -37,4 +90,7 @@
 		  <img alt="Toggle background music" src="http://media.overkillsoftware.com/2015/01/bom_music_on.png">
 		</div>
 	</body>
+	<script>
+		parseData({response:{player_count:24459,player_count_minimum:9200,appid:218620,metacritic:{link:"http://www.metacritic.com/game/pc/payday-2",score:79,user_score:4.6},steam:{link:"http://store.steampowered.com/app/218620/",reviews_all:154385,reviews_positive:123374,reviews_negative:31011}}});
+	</script>
 </html>
