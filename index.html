@@ -15,7 +15,6 @@
 				document.querySelector(".pathItemB5").dataset.current = Math.floor((data.response.steam.reviews_positive / data.response.steam.reviews_all) * 100);
 			}
 		</script>
-		<!--<script src="http://crimefest.eddydev.de/api/api.php?callback=parseData"></script>-->
 	</head>
 
 	<body>
@@ -90,7 +89,5 @@
 		  <img alt="Toggle background music" src="http://media.overkillsoftware.com/2015/01/bom_music_on.png">
 		</div>
 	</body>
-	<script>
-		parseData({response:{player_count:24459,player_count_minimum:9200,appid:218620,metacritic:{link:"http://www.metacritic.com/game/pc/payday-2",score:79,user_score:4.6},steam:{link:"http://store.steampowered.com/app/218620/",reviews_all:154385,reviews_positive:123374,reviews_negative:31011}}});
-	</script>
+		<script src="http://crimefest.eddydev.de/api/api.php?callback=parseData"></script>
 </html>
