@@ -181,10 +181,10 @@ h2
 
 .pathGoalPopup {
 	position: absolute;
-	width: 349px;
+	width: 360px;
 	height: 473px;
 	background: url("goalpopup.png");
-	transform: translate(-131.5px, -207.5px);
+	transform: translate(-368px, -207.5px);
 	background-repeat: no-repeat;
 }
 
