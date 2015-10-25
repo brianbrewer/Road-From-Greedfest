@@ -24,6 +24,56 @@
 		</audio>
 		<div class = "main">
 			<img src = "greedfest-logo.png" id = "logo">
+			<div class = "quote">
+				<div class = "quoteText">"No. No. God, I hope not. Never. No."</div>
+				<div class = "quoteInfo">- Former PAYDAY 2 Director David Goldfarb on Microtransactions in PAYDAY 2</div>
+			</div>
+			
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script>
+				n = 0;
+				quotes = ["\"No. No. God, I hope not. Never. No.\"", "\"We've made it clear that Payday 2 will have no microtransactions whatsoever (shame on you if you thought otherwise!)\"", "\"There will be NO micro-transactions in PAYDAY 2!\"",
+						  "\"We think it's a great feature, and the backlash was definitely a surprise.\"", "\"Players seem to be loving it.\"", "\"We believe it isn't Pay-2-Win\""];
+				authors = ["- Former PAYDAY 2 Director David Goldfarb on Microtransactions in PAYDAY 2", "- PAYDAY 2 Producer Almir Listo", "- PAYDAY 2 Producer Almir Listo", "- PAYDAY 2 Producer Almir Listo on Microtransactions in PAYDAY 2", 
+						   "- PAYDAY 2 Producer Almir Listo on Microtransactions in PAYDAY 2", "- PAYDAY 2 Producer Almir Listo on Microtransactions in PAYDAY 2"]
+				function cycleQuote()
+				{
+					window.setTimeout(function() 
+					{
+						$(".quote").animate(
+							{
+								opacity: 0
+							},
+							1000,
+							function()
+							{
+								n = (n + 1) % quotes.length;
+								$(".quoteText").text(quotes[n]);
+								$(".quoteInfo").text(authors[n]);
+								
+								window.setTimeout(function() 
+								{
+									$(".quote").animate(
+										{
+											opacity: 1
+										},
+										1000,
+										function()
+										{
+											cycleQuote();
+										}
+									);
+								}, 250);
+							}
+						);
+						
+					}, 2000);
+				}
+				
+				cycleQuote();
+
+			</script>
+			
 			<div class = "welcome"><h2>WELCOME TO GREEDFEST</h2>
 				<div class = "welcomeInner">
 					<div class = "welcomeLeft">
