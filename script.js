@@ -49,4 +49,10 @@ window.addEventListener("load", function () {
   _pathGoalPopup.querySelector(".close").addEventListener("click", function () {
     _pathGoalPopup.classList.add("hidden");
   });
+  
+  $(document).bind('click', function(e) {
+    if(!$(e.target).is(_pathGoalPopup) && !$(e.target).is(".pathItemGoal")) {
+      _pathGoalPopup.classList.add("hidden");
+    }
+  });
 });
