@@ -6,7 +6,6 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<link href='https://fonts.googleapis.com/css?family=Montserrat|Archivo+Narrow&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<title>The Road From Greedfest</title>
-		<script src="script.js" charset="utf-8"></script>
 		<script>
 			var parseData = function (data) {
 				// Fill in dataset for known goals
@@ -28,17 +27,17 @@
 				<div class = "quoteText">"No. No. God, I hope not. Never. No."</div>
 				<div class = "quoteInfo">- Former PAYDAY 2 Director David Goldfarb on Microtransactions in PAYDAY 2</div>
 			</div>
-			
+
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 			<script>
 				n = 0;
 				quotes = ["\"No. No. God, I hope not. Never. No.\"", "\"We've made it clear that Payday 2 will have no microtransactions whatsoever (shame on you if you thought otherwise!)\"", "\"There will be NO micro-transactions in PAYDAY 2!\"",
 						  "\"We think it's a great feature, and the backlash was definitely a surprise.\"", "\"Players seem to be loving it.\"", "\"We believe it isn't Pay-2-Win\"", "\"From an economical standpoint ... the Black Market update is working as we intended.\""];
-				authors = ["- Former PAYDAY 2 Director David Goldfarb on Microtransactions in PAYDAY 2", "- PAYDAY 2 Producer Almir Listo", "- PAYDAY 2 Producer Almir Listo", "- PAYDAY 2 Producer Almir Listo on Microtransactions in PAYDAY 2", 
+				authors = ["- Former PAYDAY 2 Director David Goldfarb on Microtransactions in PAYDAY 2", "- PAYDAY 2 Producer Almir Listo", "- PAYDAY 2 Producer Almir Listo", "- PAYDAY 2 Producer Almir Listo on Microtransactions in PAYDAY 2",
 						   "- PAYDAY 2 Producer Almir Listo on Microtransactions in PAYDAY 2", "- PAYDAY 2 Producer Almir Listo on Microtransactions in PAYDAY 2", "- PAYDAY 2 Producer Almir Listo"]
 				function cycleQuote()
 				{
-					window.setTimeout(function() 
+					window.setTimeout(function()
 					{
 						$(".quote").animate(
 							{
@@ -50,8 +49,8 @@
 								n = (n + 1) % quotes.length;
 								$(".quoteText").text(quotes[n]);
 								$(".quoteInfo").text(authors[n]);
-								
-								window.setTimeout(function() 
+
+								window.setTimeout(function()
 								{
 									$(".quote").animate(
 										{
@@ -66,14 +65,14 @@
 								}, 250);
 							}
 						);
-						
+
 					}, 2000);
 				}
-				
+
 				cycleQuote();
 
 			</script>
-			
+
 			<div class = "welcome"><h2>WELCOME TO GREEDFEST</h2>
 				<div class = "welcomeInner">
 					<div class = "welcomeLeft">
@@ -152,5 +151,6 @@
 		  <img alt="Toggle background music" src="http://media.overkillsoftware.com/2015/01/bom_music_on.png">
 		</div>
 	</body>
+		<script src="script.js" charset="utf-8"></script>
 		<script src="http://crimefest.eddydev.de/api/api.php?callback=parseData"></script>
 </html>
